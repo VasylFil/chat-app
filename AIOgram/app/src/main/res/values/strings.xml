@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AIOGram</string>
+    <string name="user">Username</string>
+    <string name="msg">Some text message here</string>
+    <string name="online">online</string>
+    <string name="send">Message</string>
+    <string name="input">Write a message...</string>
+</resources>

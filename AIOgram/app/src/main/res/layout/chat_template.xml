@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wp4410780"
+    tools:context=".Chat">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#A3212121"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/chat_image_chat"
+            android:layout_width="60dp"
+            android:layout_height="64dp"
+            android:layout_margin="0dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/user"
+            android:padding="0dp"
+            android:scaleType="center" />
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/chat_username_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/user"
+                android:textColor="#fff"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/chat_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/online"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/msgFrom_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/left"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="14dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:text="@string/msg"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/msgTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/right"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="14dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:text="@string/msg"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/nice"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/msgInput"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autofillHints="@string/send"
+            android:ems="10"
+            android:gravity="start|top|center_vertical"
+            android:hint="@string/input"
+            android:inputType="textMultiLine"
+            android:padding="14dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/grey" />
+
+        <ImageButton
+            android:id="@+id/sendBtn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/nice"
+            android:clickable="true"
+            android:contentDescription="@string/send"
+            android:focusable="true"
+            android:onClick="sendMessage"
+            app:srcCompat="@android:drawable/ic_menu_send"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="616dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
